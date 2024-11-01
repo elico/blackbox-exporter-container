@@ -1,0 +1,9 @@
+services:
+  blackbox-exporter:
+    container_name: blackbox_exporter
+    ports:
+      - 9115:9115
+    image: elicro/blackbox_exporter:latest
+    environment:
+      - TZ=Asia/Jerusalem
+    restart: unless-stopped
